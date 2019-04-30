@@ -1,11 +1,7 @@
-import pkg from './package'
+import pkg from './package';
 
 export default {
   mode: 'universal',
-
-  /*
-  ** Headers of the page
-  */
   head: {
     title: pkg.name,
     meta: [
@@ -17,46 +13,30 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
-
-  /*
-  ** Customize the progress-bar color
-  */
   loading: { color: '#fff' },
-
-  /*
-  ** Global CSS
-  */
   css: [
+    './styles/main.scss'
   ],
-
-  /*
-  ** Plugins to load before mounting the App
-  */
   plugins: [
   ],
-
-  /*
-  ** Nuxt.js modules
-  */
+  router: {
+    scrollBehavior: function (to, from, savedPosition) {
+      return { x: 0, y: 0 }
+    }
+  },
   modules: [
-    // Doc: https://axios.nuxtjs.org/usage
-    '@nuxtjs/axios',
+    '@nuxtjs/style-resources',
+    '@nuxtjs/axios'
   ],
-  /*
-  ** Axios module configuration
-  */
+  styleResources: {
+    scss: [
+      './styles/components/variables.scss'
+    ]
+  },
   axios: {
     // See https://github.com/nuxt-community/axios-module#options
   },
-
-  /*
-  ** Build configuration
-  */
   build: {
-    /*
-    ** You can extend webpack config here
-    */
-    extend(config, ctx) {
-    }
+    extend(config, ctx) {}
   }
 }
