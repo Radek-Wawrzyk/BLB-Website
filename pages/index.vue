@@ -1,26 +1,12 @@
 <template>
   <section class="container">
-    <div>
-      <logo />
-      <h1 class="title">
-        BLB-Website
-      </h1>
-      <h2 class="subtitle">
-        Baltic baseball league
-      </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green"
-        >Documentation</a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >GitHub</a>
-      </div>
-    </div>
+    <h1>Test</h1>
+    <h2>Test</h2>
+    <h3>Test</h3>
+    <h4>Test</h4>
+    <h5>Test</h5>
+    <h6>Test</h6>
+    <p>Test</p>
   </section>
 </template>
 
