@@ -4,11 +4,12 @@
   justify-content: space-between;
   padding: 0 25px;
   width: 100%;
-  height: 60px;
+  height: 70px;
   position: fixed;
   left: 0;
   top: 0;
-  background: white;
+  background: $bck-primary;
+  box-shadow: 0 4px 6px -6px rgba(34,34,34,.2);
   &__menu {
     display: flex;
   }
