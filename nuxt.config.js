@@ -19,6 +19,7 @@ export default {
     './styles/main.scss'
   ],
   plugins: [
+    { src: '@/plugins/vueCarousel', ssr: false },
   ],
   router: {
     scrollBehavior: function (to, from, savedPosition) {

@@ -1,0 +1,94 @@
+.upcoming-matches {
+  padding: 2rem 0;
+
+  &__list {
+    margin: 0 auto;
+    max-width: 800px;
+    width: 100%;
+  }
+}
+
+.match {
+  display: flex;
+  align-items: center;
+
+  &__col {
+    text-align: center;
+    &--team {
+      width: 32%;
+    }
+    &--info {
+      width: 36%;
+    }
+  }
+
+  &__team {
+    &-logo {
+      height: 150px;
+      max-width: 80%;
+    }
+    &-name {
+      margin: 1rem 0 0 0;
+      letter-spacing: 0.4rem;
+      font-size: 0.8rem;
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+  }
+
+  &__info {
+    &-matchweek {
+      display: inline-block;
+      padding: 0.2rem 0.4rem;
+      margin: 0 0 0.3rem 0;
+      border: 1px solid $text-color-light;
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      letter-spacing: 0.1rem;
+    }
+    &-date {
+      font-size: 1rem;
+      font-weight: 500;
+      letter-spacing: 0.2rem;
+      text-transform: uppercase;
+    }
+    &-time {
+      font-size: 1rem;
+      letter-spacing: 0.1rem;
+      text-transform: uppercase;
+      margin: 0.3rem 0;
+    }
+    &-versus {
+      position: relative;
+      
+      &-inner {
+        display: block;
+        position: relative;
+        font-size: 0.8rem;
+        background-color: $text-color;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        margin: 0 auto;
+        border-radius: 50%;
+        color: $bck-primary;
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 80%;
+        height: 1px;
+        background-color: $text-color;
+      }
+    }
+  }
+}
+
+.upcoming-matches .VueCarousel-navigation-button {
+  
+}

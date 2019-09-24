@@ -11,6 +11,7 @@ import { setContext, getLocation, getRouteData, normalizeError } from './utils'
 /* Plugins */
 
 import nuxt_plugin_axios_ce6b2570 from 'nuxt_plugin_axios_ce6b2570' // Source: ./axios.js (mode: 'all')
+import nuxt_plugin_vueCarousel_7e127292 from 'nuxt_plugin_vueCarousel_7e127292' // Source: ../plugins/vueCarousel (mode: 'client')
 
 // Component: <NoSsr>
 Vue.component(NoSsr.name, NoSsr)
@@ -131,6 +132,10 @@ async function createApp(ssrContext) {
 
   if (typeof nuxt_plugin_axios_ce6b2570 === 'function') {
     await nuxt_plugin_axios_ce6b2570(app.context, inject)
+  }
+
+  if (process.client && typeof nuxt_plugin_vueCarousel_7e127292 === 'function') {
+    await nuxt_plugin_vueCarousel_7e127292(app.context, inject)
   }
 
   // If server-side, wait for async component to be resolved first

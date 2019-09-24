@@ -9,9 +9,9 @@
       <h6>Test</h6>
       <p>Test</p>
     </header>
-    <section class="section" id="upcoming">
-      upcoming matches
-    </section>
+
+    <upcoming-matches :matches="matches" />
+
     <section class="section" id="about">
       about league
     </section>
@@ -28,10 +28,17 @@
 </template>
 
 <script>
+import UpcomingMatches from '~/components/UpcomingMatches/UpcomingMatches.vue';
+import { upcomingGames } from '~/static/mockupData.js';
 
 export default {
-  name: 'Homepage'
-
+  name: 'homepage',
+  data: () => ({
+    matches: upcomingGames,
+  }),
+  components: {
+    UpcomingMatches,
+  },
 };
 
 </script>
