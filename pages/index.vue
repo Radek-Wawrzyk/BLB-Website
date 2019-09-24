@@ -29,7 +29,7 @@
 
 <script>
 import UpcomingMatches from '~/components/UpcomingMatches/UpcomingMatches.vue';
-import { upcomingGames } from '~/static/mockupData.js';
+import { upcomingGames } from '~/mockupData.js';
 
 export default {
   name: 'homepage',
