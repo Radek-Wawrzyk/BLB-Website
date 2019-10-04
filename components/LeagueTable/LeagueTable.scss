@@ -1,0 +1,204 @@
+.league-table {
+  &__header {
+    padding: 2rem 0;
+    text-align: center;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    font-size: 2rem;
+    letter-spacing: 0.1rem;
+  }
+
+  &__content {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+.table {
+  &__header {
+    display: flex;
+    width: 100%;
+    background-color: $primary-lighter;
+    
+    &-column {
+      height: 50px;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+      padding: 0 0 0 0.5rem;
+      color: $accent;
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      letter-spacing: 0.1rem;
+
+      &:nth-child(1) {
+        width: 8%;
+      }
+      &:nth-child(2) {
+        width: 37%;
+      }
+      &:nth-child(3) {
+        width: 11%;
+      }
+      &:nth-child(4) {
+        width: 36%;
+        padding: 0 1rem;
+      }
+      &:nth-child(5) {
+        width: 8%;
+      }
+    }
+  }
+
+  &__content {
+    border: 1px solid $bck-secondary;
+    border-top: none;
+    border-bottom: none;
+  }
+
+  &-team {
+    display: flex;
+    width: 100%;
+    border-bottom: 1px solid $bck-secondary;
+
+    &__stat {
+      padding: 0 0.2rem;
+
+      &-wins {
+        color: $success;
+        text-transform: uppercase;
+        font-size: 0.8rem;
+        letter-spacing: 0.1rem;
+      }
+      &-losses {
+        color: $danger;
+        text-transform: uppercase;
+        font-size: 0.8rem;
+        letter-spacing: 0.1rem;
+      }
+    }
+
+    &__line {
+      height: 5px;
+      width: 100%;
+      display: block;
+
+      &--wins {
+        background-color: $success;
+      }
+      &--losses {
+        background-color: $danger;
+      }
+    }
+
+    &__mobile-label {
+      display: none;
+    }
+
+    &__logo {
+      width: 40px;
+      height: 40px;
+      object-fit: contain;
+      margin: 0 0.5rem 0 0;
+    }
+
+    &__column {
+      height: 50px;
+      display: flex;
+      align-items: center;
+      border-right: 1px solid $bck-secondary;
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      letter-spacing: 0.1rem;
+      text-align: center;
+      justify-content: center;
+
+      &--stats {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      &--info {
+        text-align: left;
+        justify-content: flex-start;
+        padding: 0 0 0 1.5rem;
+      }
+
+      &:nth-child(1) {
+        width: 8%;
+      }
+      &:nth-child(2) {
+        width: 37%;
+      }
+      &:nth-child(3) {
+        width: 11%;
+      }
+      &:nth-child(4) {
+        width: 36%;
+        padding: 0 1rem;
+      }
+      &:nth-child(5) {
+        width: 8%;
+        border-right: none;
+      }
+    }
+  }
+}
+
+// Media
+
+@media screen and (max-width: 768px) {
+  .table {
+    &__header {
+      display: none;
+    }
+
+    &__content {
+      border: none;
+    }
+
+    &-team {
+      flex-wrap: wrap;
+      padding: 0.5rem 0;
+      border: 1px solid $bck-secondary;
+      border-bottom: none;
+
+      &:last-child {
+        border-bottom: 1px solid $bck-secondary;
+      }
+
+      &__mobile-label {
+        display: inline-block;
+        margin: 0 0 0 0.2rem;
+      }
+
+      &__column {
+        height: auto;
+        border: none;
+  
+        &:nth-child(1) {
+          width: 10%;
+        }
+        &:nth-child(2) {
+          width: 70%;
+        }
+        &:nth-child(3) {
+          width: 20%;
+        }
+        &:nth-child(4) {
+          width: 80%;
+          padding: 0 1rem;
+        }
+        &:nth-child(5) {
+          width: 20%;
+          border-right: none;
+        }
+      }
+    }
+  }
+}

@@ -15,9 +15,9 @@
     <section class="section" id="about">
       about league
     </section>
-     <section class="section" id="stats">
-      stats
-    </section>
+
+    <league-table :teams="teams" />
+
     <section class="section" id="news">
       latest news
     </section>
@@ -29,15 +29,19 @@
 
 <script>
 import UpcomingMatches from '~/components/UpcomingMatches/UpcomingMatches.vue';
+import LeagueTable from '~/components/LeagueTable/LeagueTable.vue';
 import { upcomingGames } from '~/mockupData.js';
+import { teamsStats } from '~/mockupData.js';
 
 export default {
   name: 'homepage',
   data: () => ({
     matches: upcomingGames,
+    teams: teamsStats,
   }),
   components: {
     UpcomingMatches,
+    LeagueTable,
   },
 };
 
